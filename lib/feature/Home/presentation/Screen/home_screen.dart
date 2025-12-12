@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio/feature/Home/presentation/widgets/WhatICanIDoForMobile.dart';
 import 'package:my_portfolio/feature/Home/presentation/widgets/drawer_content.dart';
+import 'package:my_portfolio/feature/Home/presentation/widgets/hobbies_projects.dart';
 import 'package:my_portfolio/feature/Home/presentation/widgets/mobile_header.dart';
+import 'package:my_portfolio/feature/Home/presentation/widgets/play_veido_widget.dart';
 import 'package:my_portfolio/feature/Home/presentation/widgets/profile_photo.dart';
+import 'package:my_portfolio/feature/Home/presentation/widgets/project_widgets.dart';
 import 'package:my_portfolio/feature/Home/presentation/widgets/web_header.dart';
 import 'package:my_portfolio/feature/Home/presentation/widgets/welcome_text.dart';
+import 'package:my_portfolio/feature/Home/presentation/widgets/what_i_do.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -47,209 +54,90 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Container(
-              height: 500,
-              color: const Color.fromARGB(255, 114, 106, 106),
+              color: Colors.black,
               child: Column(
                 children: [
-                  const Text(
-                    "What I Can Do",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    "What i can do",
+                    style: GoogleFonts.kayPhoDu(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          color: Colors.amber,
-                          height: 300,
-                          child: Wrap(
-                            children: [
-                              Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                                width: 200,
-                                height: 100,
-                                color: Colors.amberAccent,
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.android,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      "Android Dev",
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                                width: 200,
-                                height: 100,
-                                color: Colors.amberAccent,
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.apple,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      "Web Dev",
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                                width: 200,
-                                height: 100,
-                                color: Colors.amberAccent,
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.apple,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      "Desktop Dev",
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                                width: 200,
-                                height: 100,
-                                color: Colors.amberAccent,
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.apple,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      "IOS Dev",
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          // child: Column(
-                          //   spacing: 20,
-                          //   children: [
-                          //   Row(children: [
-                          //     Container(
-                          //       padding: EdgeInsets.symmetric(horizontal: 20),
-                          //    //   width: 200,
-                          //       height: 100,
-                          //       color: Colors.amberAccent,
-                          //      child: Row(children: [
-                          //       Icon(Icons.apple,color:Colors.white,),
-                          //       SizedBox(width: 10,),
-                          //       Text("IOS Dev",style:  TextStyle(color: Colors.white),)
-                          //      ],),
-                          //     ),
-                          //     SizedBox(width: 20,),
-                          //       Container(
-                          //       padding: EdgeInsets.symmetric(horizontal: 20),
-                          //     //  width: 200,
-                          //       height: 100,
-                          //       color: Colors.amberAccent,
-                          //      child: Row(children: [
-                          //       Icon(Icons.apple,color:Colors.white,),
-                          //       SizedBox(width: 10,),
-                          //       Text("IOS Dev",style:  TextStyle(color: Colors.white),)
-                          //      ],),
-                          //     ),
-
-                          //   ],),
-                          //     Row(
-                          //       children: [
-                          //         Container(
-                          //           padding: EdgeInsets.symmetric(horizontal: 20),
-                          //                                      //   width: 200,
-                          //           height: 100,
-                          //           color: Colors.amberAccent,
-                          //          child: Row(children: [
-                          //           Icon(Icons.apple,color:Colors.white,),
-                          //           SizedBox(width: 10,),
-                          //           Text("IOS Dev",style:  TextStyle(color: Colors.white),)
-                          //          ],),
-                          //         ),
-                          //          SizedBox(width: 20,),
-                          //       Container(
-                          //       padding: EdgeInsets.symmetric(horizontal: 20),
-                          //     //  width: 200,
-                          //       height: 100,
-                          //       color: Colors.amberAccent,
-                          //      child: Row(children: [
-                          //       Icon(Icons.apple,color:Colors.white,),
-                          //       SizedBox(width: 10,),
-                          //       Text("IOS Dev",style:  TextStyle(color: Colors.white),)
-                          //      ],),
-                          //     ),
-                          //       ],
-                          //     ),
-
-                          // ],),
-                          // width: MediaQuery.of(context).size.width * .4,
-                          // constraints: BoxConstraints(
-                          //     maxWidth: MediaQuery.of(context).size.width * .6,
-                          //     minWidth: MediaQuery.of(context).size.width * .5),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      Expanded(
-                        child: Container(
-                          color: Colors.amber,
-                          height: 300,
-                          // width: MediaQuery.of(context).size.width * .4,
-                          // constraints: BoxConstraints(
-                          //     maxWidth: MediaQuery.of(context).size.width * .6,
-                          //     minWidth: MediaQuery.of(context).size.width * .5),
-                        ),
-                      )
-                    ],
-                  ),
+                  if (constraints.maxWidth >= 670)
+                    const WhatICanIDoForWeb()
+                  else
+                    const WhatICanIDoForMobile()
                 ],
               ),
             ),
             Container(
-              height: 500,
-              color: const Color.fromARGB(255, 202, 65, 65),
+              // height: 500,
+              color: Colors.black,
+              child: Column(
+                spacing: 20,
+                children: [
+                  SizedBox(height:20),
+                  Text(
+                    "Projects",
+                    style: GoogleFonts.kayPhoDu(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Wrap(
+                    spacing: 20,
+                    runSpacing: 10,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      ProjectWidget(
+                          projectName: "Courtify",
+                          description:
+                              "An easy-to-use app for quickly booking sports fields in your area.",
+                          onPressed: () {},
+                          images: "images/cortify.PNG"),
+                           ProjectWidget(
+                          projectName: "Edufbcai Student",
+                          description:
+                              "E-learning system",
+                          onPressed: () {},
+                          images: "images/student.PNG"),
+                           ProjectWidget(
+                          projectName: "Dr Smart Attendance App",
+                          description:
+                              "Attendance system for student ",
+                          onPressed: () {},
+                          images: "images/smartAttendance.PNG"),
+                     
+                    ],
+                  ),
+                  SizedBox(height: 20,)
+                ],
+              ),
             ),
+            Container(
+                color: Colors.black,
+                //  color: const Color.fromARGB(255, 202, 65, 65),
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  spacing: 30,
+                  children: [
+                    Text(
+                      "Hobbies Projects",
+                      style: GoogleFonts.kayPhoDu(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const HobbiesProjects(),
+                  ],
+                )),
             Container(
               height: 500,
               color: const Color.fromARGB(255, 21, 163, 28),

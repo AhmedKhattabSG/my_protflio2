@@ -62,7 +62,7 @@ class _AppBarButtonState extends State<AppBarButton> with SingleTickerProviderSt
             curve: Curves.easeInOut,
             style: GoogleFonts.kayPhoDu(
               color: isHovered ? Colors.blueAccent : Colors.white,
-              fontSize: isHovered ? 28 : 25,
+              fontSize: isHovered ? 25 : 22,
               fontWeight: FontWeight.bold,
             ),
             child: Text(widget.text),
