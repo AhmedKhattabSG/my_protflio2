@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SkillWidgets extends StatefulWidget {
-  SkillWidgets({
+class SkillItem extends StatefulWidget {
+  SkillItem({
     super.key,
     required this.color,
     required this.icon,
@@ -14,10 +14,10 @@ class SkillWidgets extends StatefulWidget {
   final Color color;
 
   @override
-  State<SkillWidgets> createState() => _SkillWidgetsState();
+  State<SkillItem> createState() => _SkillWidgetsState();
 }
 
-class _SkillWidgetsState extends State<SkillWidgets>
+class _SkillWidgetsState extends State<SkillItem>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<Offset> _animation;

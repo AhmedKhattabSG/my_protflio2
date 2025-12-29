@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectWidget extends StatelessWidget {
   const ProjectWidget(
       {super.key,
       required this.projectName,
       required this.description,
-      required this.onPressed,
+       this.googlePlayUrl,
+       this.appStoreUrl,
       required this.images});
   final String projectName;
   final String description;
   final String images;
 
-  final VoidCallback onPressed;
+  final String? googlePlayUrl;
+  final String ?appStoreUrl;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 310,
+      height: 340,
       width: 310,
       color: const Color.fromRGBO(169, 180, 182, 0.114),
       child: Column(
@@ -63,20 +67,36 @@ class ProjectWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   spacing: 20,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 5.0),
+                      padding: EdgeInsets.only(left: 5,),
                       child: Text(
                         "avilable on : ",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    SvgPicture.asset(
-                      "images/googleplay.svg",
-                      color: Colors.white,
-                      height: 20,
-                      width: 20,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal:20),
+                      child: GestureDetector(
+                        onTap: () async {
+                          final url = Uri.parse(googlePlayUrl!);
+                          if (!await launchUrl(
+                            url,
+                            mode: LaunchMode
+                                .externalApplication, // يفتح المتصفح الخارجي
+                          )) {
+                            throw Exception('لا يمكن فتح الرابط');
+                          }
+                        },
+                        child: SvgPicture.asset(
+                          "images/googleplay.svg",
+                          color: Colors.white,
+                          height: 20,
+                          width: 20,
+                        ),
+                      ),
                     )
                   ],
                 ),

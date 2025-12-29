@@ -6,31 +6,50 @@ class HobbiesProjects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Wrap(
-      runAlignment: WrapAlignment.center,
-      alignment: WrapAlignment.center,
-      spacing: 20,
-      runSpacing: 20,
+    return Column(
       children: [
-        SizedBox(
-          height: 480,
-          width: 330,
-          child: AssetVideoPlayer(assetPath: "images/shose.mp4",isMuted: false,),
+        const SizedBox(
+          height: 100,
         ),
-        SizedBox(
-          height: 480,
-          width: 330,
-          child: AssetVideoPlayer(assetPath: "images/outPut.mp4",isMuted: false,),
-        ),
-        SizedBox(
-          height: 480,
-          width: 330,
-          child: AssetVideoPlayer(assetPath: "images/postapp.mp4",isMuted: false,),
-        ),
-        SizedBox(
-          height: 480,
-          width: 330,
-          child: AssetVideoPlayer(assetPath: "images/shose.mp4",isMuted: false,),
+        Wrap(
+          runAlignment: WrapAlignment.center,
+          alignment: WrapAlignment.center,
+          spacing: 20,
+          runSpacing: 60,
+          children: [
+            SizedBox(
+              height: 480,
+              width: 330,
+              child: AssetVideoPlayer(
+                assetPath: "images/shose.mp4",
+                isMuted: false,
+              ),
+            ),
+            SizedBox(
+              height: 480,
+              width: 330,
+              child: AssetVideoPlayer(
+                assetPath: "images/outPut.mp4",
+                isMuted: false,
+              ),
+            ),
+            SizedBox(
+              height: 480,
+              width: 330,
+              child: AssetVideoPlayer(
+                assetPath: "images/postapp.mp4",
+                isMuted: false,
+              ),
+            ),
+            SizedBox(
+              height: 480,
+              width: 330,
+              child: AssetVideoPlayer(
+                assetPath: "images/chat.mp4",
+                isMuted: false,
+              ),
+            ),
+          ],
         ),
       ],
     );

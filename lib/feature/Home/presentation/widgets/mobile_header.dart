@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MobileHeader extends StatelessWidget {
-  const MobileHeader({super.key,required this.onTapDrawer});
-final VoidCallback? onTapDrawer;
+  const MobileHeader({super.key, required this.onTapDrawer});
+  final VoidCallback? onTapDrawer;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      height: 100,
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-        Color.fromARGB(95, 3, 109, 91),
-        Color.fromARGB(255, 2, 59, 50),
-      ])),
+      margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+      height: 70,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          gradient:   const LinearGradient(colors: [
+            Color.fromARGB(95, 1, 7, 6),
+          Color(0xff0d1012)
+          ])),
       child: Row(
         children: [
           Text(
@@ -23,7 +25,7 @@ final VoidCallback? onTapDrawer;
           ),
           const Spacer(),
           IconButton(
-              onPressed:onTapDrawer,
+              onPressed: onTapDrawer,
               icon: const Icon(
                 Icons.menu,
                 color: Colors.white,

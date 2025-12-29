@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:chewie/chewie.dart';
 
+// ignore: must_be_immutable
 class AssetVideoPlayer extends StatefulWidget {
   final String assetPath;
   bool isMuted = true;
